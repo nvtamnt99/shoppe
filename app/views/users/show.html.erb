@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-offset-3 col-lg-6">
+      <div class="text-left">
+        <label> email: <%= @user.email %></label><br>
+        <label> fullname: <%= @user.name %></label><br>
+      </div>
+      <%= link_to "Logout", logout_path, method: :delete %>
+      <%= link_to 'Home', root_path %>
+    </div>
+  </div>
+</div>
