@@ -6,9 +6,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   </head>
 
   <body>
+    <section class="content" style="min-height: auto;">
+      <% flash.each do |key, value| %>
+        <div class="row">
+          <div class="alert alert-<%= key %>">
+            <%= value %>
+          </div>
+        </div>
+      <% end %>
+    </section>
     <%= yield %>
   </body>
 </html>
